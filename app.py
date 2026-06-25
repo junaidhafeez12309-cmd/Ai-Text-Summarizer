@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,send_from_directory
 from transformers import pipeline
 
 app = Flask(__name__)
@@ -75,6 +75,9 @@ def summarize_text():
     summary = result[0].get('generated_text', result[0].get('summary_text', ''))
 
     return summary
+@app.route('/sw.js')
+def monetag_sw():
+    return send_from_directory('.', 'sw.js')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
