@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disclaimer | AI Text Summarizer</title>
-    <link rel="stylesheet" href="/static/CSS/index.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo-section">
-            <img src="/static/images/logoimg.jpeg" alt="App Logo">
+            <img src="{{ url_for('static', filename='images/logoimg.jpeg') }}"
+     alt="IUB Logo">
             <div class="logo-text">
                 <h2>AI Text Summarizer</h2>
                 <h3>Smart & Simple</h3>
