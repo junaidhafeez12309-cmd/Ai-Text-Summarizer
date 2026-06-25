@@ -78,6 +78,9 @@ def summarize_text():
 @app.route('/sw.js')
 def monetag_sw():
     return send_from_directory('.', 'sw.js')
+@app.route("/monetag-sw.js")
+def monetag_sw():
+    return send_from_directory(".", "monetag-sw.js", mimetype="application/javascript")
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
