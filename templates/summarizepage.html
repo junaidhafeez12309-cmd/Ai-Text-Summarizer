@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Summarizer</title>
+    <link rel="stylesheet" href="/static/CSS/index.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo-section">
+        <img src="/static/images/logoimg.jpeg" alt="App Logo">
+        <div class="logo-text">
+            <h2>AI Text Summarizer</h2>
+            <h3>Smart & Simple</h3>
+        </div>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+        <li><a href="/summarize" class="active">Summarizer</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-summary">
+    <h1>AI Text Summarizer</h1>
+    <p>Paste your text below and get a short summary.</p>
+
+    <div class="boxes">
+        <div class="box">
+            <h3>Your Text</h3>
+            <textarea id="inputText" placeholder="Enter or paste your long text here..."></textarea>
+            <label for="modelSelect">Choose model:</label>
+            <select id="modelSelect">
+                <option value="t5-small">T5 Small (fast)</option>
+                <option value="bart-large-cnn">BART Large CNN (accurate)</option>
+                <option value="pegasus-xsum">Pegasus XSum (news)</option>
+            </select>
+        </div>
+
+        <div class="box">
+            <h3>Summary</h3>
+            <textarea id="outputSummary" placeholder="Your summary will appear here..."></textarea>
+        </div>
+    </div>
+
+    <button class="btn">Summarize →</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    Proudly developed by a student of Islamia University Bahawalpur (IUB)
+</footer>
+<script src="/static/js/summarize.js"></script>
+<script src="/static/js/site.js" defer></script>
+</body>
+</html>
