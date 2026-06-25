@@ -75,9 +75,11 @@ def summarize_text():
     summary = result[0].get('generated_text', result[0].get('summary_text', ''))
 
     return summary
-@app.route('/sw.js')
-def monetag_sw():
-    return send_from_directory('.', 'sw.js')
+@app.route("/sw.js")
+def sw_js():
+    return send_from_directory(".", "sw.js", mimetype="application/javascript")
+
+
 @app.route("/monetag-sw.js")
 def monetag_sw():
     return send_from_directory(".", "monetag-sw.js", mimetype="application/javascript")
