@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Text Summarizer</title>
 
-    <link rel="stylesheet" href="/static/CSS/index.css">
+   <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,7 +22,8 @@
         <div class="logo-section">
 
             <!-- LOGO IMAGE -->
-            <img src="/static/images/logoimg.jpeg" alt="IUB Logo">
+            <img src="{{ url_for('static', filename='images/logoimg.jpeg') }}"
+            alt="IUB Logo">
 
             <div class="logo-text">
                 <h2>ISLAMIA UNIVERSITY</h2>
